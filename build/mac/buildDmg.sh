@@ -21,7 +21,7 @@ set -x
 ############
 
 PYTHON_PATH="`find /usr/local/Cellar/python@3.9 -type f -name python3.9 | head -n1`"
-PIP_PATH="`find /usr/local/Cellar/python@3.9 -type f -name pip3 | head -n1`"
+PIP_PATH="`find /usr/local/Cellar/python@3.9 -type f -name pip3.9 | head -n1`"
 APP_NAME='helloWorld'
 
 PYTHON_VERSION="`${PYTHON_PATH} --version | cut -d' ' -f2`"
