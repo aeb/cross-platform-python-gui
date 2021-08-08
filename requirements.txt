@@ -1,5 +1,5 @@
 kivy
 kivymd
 numpy
-matpltotlib
+matplotlib
 scipy
