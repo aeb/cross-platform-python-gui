@@ -22,7 +22,7 @@ set -x
 
 PYTHON_PATH="`find /usr/local/Cellar/python@3.9 -type f -name python3.9 | head -n1`"
 PIP_PATH="`find /usr/local/Cellar/python@3.9 -type f -name pip3.9 | head -n1`"
-APP_NAME='helloWorld'
+APP_NAME='ngEHTapp'
 
 PYTHON_VERSION="`${PYTHON_PATH} --version | cut -d' ' -f2`"
 PYTHON_EXEC_VERSION="`echo ${PYTHON_VERSION} | cut -d. -f1-2`"
@@ -52,7 +52,8 @@ ls -lah
 brew update
 
 # install os-level depends
-brew install wget python3
+# AEB Why are we installing python3 again?
+# brew install wget python3
 brew reinstall sdl2 sdl2_image sdl2_ttf sdl2_mixer
 
 # setup a virtualenv to isolate our app's python depends
@@ -120,7 +121,7 @@ coll = COLLECT(exe, Tree('../src/'),
                name='${APP_NAME}')
 app = BUNDLE(coll,
              name='${APP_NAME}.app',
-             icon=None,
+             icon='../src/images/icon.png',
              bundle_identifier=None)
 EOF
 
