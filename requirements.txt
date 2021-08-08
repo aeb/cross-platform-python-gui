@@ -1,1 +1,5 @@
 kivy
+kivymd
+numpy
+matpltotlib
+scipy
